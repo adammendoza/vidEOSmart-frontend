@@ -1,0 +1,13 @@
+<bs-modal id="modal-register" #registerModal [keyboard]="false" [backdrop]="'static'">
+  <bs-modal-header [showDismiss]="false">
+    <h4 class="modal-title">Thank you for creating a new account with us.</h4>
+  </bs-modal-header>
+  <bs-modal-body>
+    <div>
+      <br />
+      <h2>Please check your email for link to verify your new account.</h2>
+      <div class="form-group"><a [routerLink]="['/home']" class="btn btn-primary">Close</a></div>
+    </div>
+  </bs-modal-body>
+  <bs-modal-footer [show-default-buttons]="false"></bs-modal-footer>
+</bs-modal>

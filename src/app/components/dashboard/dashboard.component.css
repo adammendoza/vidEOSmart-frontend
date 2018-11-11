@@ -1,0 +1,16 @@
+.container {
+  background: #fdaeae54;
+}
+
+.smart-contract {
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button-right {
+  float: right;
+}

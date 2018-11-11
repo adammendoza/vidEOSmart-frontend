@@ -1,14 +1,61 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>VidEOSmartFrontend</title>
-  <base href="/">
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"></html><![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"></html><![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"></html><![endif]-->
+<!-- [if gt IE 8]><! -->
+<html class="no-js">
+  <!-- <![endif] -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VidEOSmart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="VidEOSmart" />
+    <meta name="keywords" content="legal, lawyer, law" />
+    <meta name="author" content="VidEOSmart 2018" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <script>
+      var NGXSTORE_CONFIG = {
+        prefix: 'nc_ngx_', // default: 'ngx_'
+        clearType: 'prefix', // default: 'prefix'
+        mutateObjects: true, // default: true
+        debugMode: false, // you can enable debug logs if you ever meet any bug to localize its source
+        cookiesScope: '', // what you pass here will actually prepend base domain
+        cookiesCheckInterval: 0, // number in ms describing how often cookies should be checked for changes
+        previousPrefix: 'angular2ws_' // you have to set it only if you were using custom prefix in old version ('angular2ws_' is a default value)
+      };
+    </script>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+  </head>
+
+  <body>
+    <vs-root></vs-root>
+    <div class="loading">
+      <div class="text-center slider-text">
+        <div class="slider-text-inner js-fullheight">
+          <h2 style="padding-top: 225px">Smart contracts for content creators</h2>
+          <h3 class="title-sub-text" style="color: white">Fund your projects with smart contracts</h3>
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

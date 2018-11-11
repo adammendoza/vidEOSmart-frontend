@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="nav-header">
+    <a href="#" class="js-videosmart-nav-toggle videosmart-nav-toggle"><i></i></a>
+    <h1 id="videosmart-logo">
+      <a href="index.html"><img [src]="'assets/img/logo.png'"/></a>
+    </h1>
+    <nav id="videosmart-menu-wrap" role="navigation">
+      <ul class="sf-menu" id="videosmart-primary-menu">
+        <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
+        <li><a [routerLink]="['/dashboard']" [routerLinkActive]="['active']">Dashboard</a></li>
+        <li><a [routerLink]="['/contact']" [routerLinkActive]="['active']">Contact</a></li>
+        <li *ngIf="!username"><a [routerLink]="['/register']" [routerLinkActive]="['active']">Register</a></li>
+        <li *ngIf="!username"><vs-login class="sf-menu"></vs-login></li>
+        <li *ngIf="username">
+          <a [routerLink]="['/profile']" [routerLinkActive]="['active']">
+            <span *ngIf="notificationCount > 0" class="badge">{{ username }}</span>
+          </a>
+        </li>
+        <li *ngIf="username"><a (click)="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

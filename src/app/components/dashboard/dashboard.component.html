@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="header-offset"></div>
+  <div class="videosmart-container-form-inner">
+    <div class="row">
+      <div class="col-md-12">
+        <input
+          type="submit"
+          (click)="showCreateSmartContract()"
+          class="btn btn-success btn-danger"
+          value="Create a Smart Contract"
+        />
+        <input
+          type="submit"
+          (click)="getDashboardData()"
+          class="btn btn-success btn-danger button-right"
+          value="Refresh List"
+        />
+      </div>
+    </div>
+    <br *ngIf="displayCreateSmartContract === true" />
+
+    <div *ngIf="displayCreateSmartContract === true" class="smart-contract">
+      <form novalidate [formGroup]="createSmartContractForm" (ngSubmit)="onSubmitCreateSmartContractForm()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Title*</label>
+              <input formControlName="title" type="text" class="form-control" placeholder="Please enter a title *" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>URL*</label>
+              <input formControlName="url" type="text" class="form-control" placeholder="Please enter URL *" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Tags*</label>
+              <input formControlName="tag" type="text" class="form-control" placeholder="Please enter tags *" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Description*</label>
+              <input
+                formControlName="description"
+                type="text"
+                class="form-control"
+                placeholder="Please enter description *"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Sponsor *</label>
+              <ng-select
+                [allowClear]="false"
+                (selected)="sponsorsArraySelectedValue($event, i)"
+                [items]="sponsorsArray"
+                placeholder="SELECT"
+              >
+              </ng-select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Trigger*</label>
+              <input formControlName="trigger" type="text" class="form-control" placeholder="Please enter a value *" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Expiration Date*</label>
+              <input
+                formControlName="expirationDate"
+                type="text"
+                class="form-control"
+                placeholder="Please enter a date *"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-success btn-danger">Submit</button>
+            <button type="reset" class="btn btn-success btn-danger" (click)="showCreateSmartContract()">Cancel</button>
+            <img
+              *ngIf="isLoading"
+              src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <br />
+
+    <vs-smartcontract-item *ngFor="let smartContract of smartContracts" [smartContract]="smartContract">
+    </vs-smartcontract-item>
+  </div>
+</div>

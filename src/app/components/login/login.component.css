@@ -1,0 +1,22 @@
+/* Superfish Override Menu */
+/* see sf-menu css in header component where the nav items are rendered */
+
+a {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: none;
+  border-top: none;
+  border-top: none;
+  text-decoration: none;
+  zoom: 1;
+  font-size: 13px;
+  border-bottom: none !important;
+}
+
+a:hover,
+a:focus,
+a.active {
+  cursor: pointer;
+  color: #fff !important;
+}

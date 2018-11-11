@@ -1,0 +1,23 @@
+<div class="dashboard-item">
+  <div>
+    <div>
+      <h2>{{ smartContract?.firstName }} {{ smartContract?.lastName }}</h2>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <div>ID #: {{ smartContract?.Id }}</div>
+      <div>Title: {{ smartContract?.title }}</div>
+      <div>Tags: {{ smartContract?.tag }}</div>
+      <div>URL: {{ smartContract?.url }}</div>
+      <div>Expiration Date: {{ smartContract?.expirationDate | date: 'medium' }}</div>
+      <div>Trigger: {{ smartContract?.trigger }}</div>
+      <div>Sponsor: {{ smartContract?.sponsor }}</div>
+      <div>Monetization: {{ smartContract?.monetization }}</div>
+      <div class="row">
+        <div class="col-md-12"><input type="submit" class="btn btn-success btn-danger" value="Details" /></div>
+      </div>
+    </div>
+  </div>
+</div>
